@@ -1,8 +1,11 @@
 {
-  "name": "cli",
+  "name": "@inkart/cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "create": "./dist/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +15,8 @@
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "cac": "^6.7.14",
-    "chalk": "^5.4.1"
+    "chalk": "^5.4.1",
+    "@inkart/templates": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.8.10",
