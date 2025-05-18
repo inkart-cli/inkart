@@ -1,0 +1,25 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "@types/prompts": "^2.4.9",
+    "eslint": "^9.27.0",
+    "prompts": "^2.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
