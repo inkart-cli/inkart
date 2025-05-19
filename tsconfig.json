@@ -1,15 +1,34 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "CommonJS",
-    "outDir": "./dist",
-    "rootDir": "./",
+    "target": "es2020",
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "webworker"],
+    "baseUrl": ".",
+    "rootDir": ".",
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "paths": {
+    },
+    "resolveJsonModule": true,
+    "types": [
+    ],
     "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "declarationDir": "./types",
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
   },
-  "include": ["./**/*.ts"],
-  "exclude": ["node_modules"]
-} 
+  "include": [
+    "*.ts",
+    "packages"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.md",
+    "**/dist"
+  ]
+}

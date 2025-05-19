@@ -2,21 +2,37 @@
   "name": "@inkart/cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "./cli.mjs",
+  "module": "./cli.mjs",
+  "unpkg": "./cli.iife.min.js",
+  "jsdelivr": "./cli.iife.min.js",
+  "types": "./index.d.mts",
+  "files": [
+    "*.d.mts",
+    "*.js",
+    "*.mjs"
+  ],
   "bin": {
     "create": "./dist/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup --config=rollup.config.ts --configPlugin=rollup-plugin-esbuild"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
+    "@inkart/templates": "workspace:*",
+    "@rollup/plugin-json": "^6.1.0",
     "cac": "^6.7.14",
     "chalk": "^5.4.1",
-    "@inkart/templates": "workspace:*"
+    "rollup": "^4.41.0",
+    "rollup-plugin-esbuild": "^6.2.1"
   },
   "devDependencies": {
     "@types/node": "^20.8.10",
