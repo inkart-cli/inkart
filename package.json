@@ -5,6 +5,7 @@
   "description": "A Node-based scaffolding tool for quickly creating front-end project templates",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "pnpm -r run build",
     "clean": "tsx scripts/clean.ts",
