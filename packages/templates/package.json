@@ -6,7 +6,8 @@
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
   "scripts": {
-    "build": "echo build"
+    "build": "echo build",
+    "prepack": "pnpm run build"
   },
   "files": ["*"],
   "publishConfig": {
