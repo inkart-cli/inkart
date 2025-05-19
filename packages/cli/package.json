@@ -1,12 +1,14 @@
 {
   "name": "@inkart/cli",
-  "version": "1.0.0",
-  "description": "",
   "type": "module",
-  "main": "./cli.mjs",
-  "module": "./cli.mjs",
-  "unpkg": "./cli.iife.min.js",
-  "jsdelivr": "./cli.iife.min.js",
+  "version": "0.0.1",
+  "description": "A Node-based scaffolding tool for quickly creating front-end project templates",
+  "author": "青椒肉丝<https://github.com/pkc918>",
+  "license": "MIT",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "unpkg": "./index.iife.min.js",
+  "jsdelivr": "./index.iife.min.js",
   "types": "./index.d.mts",
   "files": [
     "*.d.mts",
@@ -14,17 +16,16 @@
     "*.mjs"
   ],
   "bin": {
-    "create": "./dist/index.js"
+    "create": "./index.mjs"
   },
   "scripts": {
-    "build": "rollup --config=rollup.config.ts --configPlugin=rollup-plugin-esbuild"
+    "build": "rollup --config=rollup.config.ts --configPlugin=rollup-plugin-esbuild",
+    "prepack": "pnpm run build"
   },
   "publishConfig": {
     "access": "public"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "@inkart/templates": "workspace:*",
