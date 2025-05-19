@@ -1,7 +1,7 @@
 {
-  "name": "@inkart/templates",
+  "name": "@inkart/temps",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Front-End project templates for Inkart",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
