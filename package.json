@@ -17,6 +17,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
     "@types/node": "catalog:",
+    "eslint": "catalog:",
     "eslint-plugin-format": "catalog:"
   }
 }
