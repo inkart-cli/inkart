@@ -9,12 +9,13 @@
   "scripts": {
     "build": "pnpm -r run build",
     "clean": "tsx scripts/clean.ts",
-    "publish": "tsx scripts/publish.ts",
+    "publish:ci": "tsx scripts/publish.ts",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
-    "@antfu/eslint-config": "^4.13.1"
+    "@antfu/eslint-config": "^4.13.1",
+    "@types/node": "^22.15.19"
   }
 }
