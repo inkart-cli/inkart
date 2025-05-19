@@ -56,6 +56,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 20.17.47
+      eslint:
+        specifier: 'catalog:'
+        version: 9.27.0
       eslint-plugin-format:
         specifier: 'catalog:'
         version: 1.0.1(eslint@9.27.0)
@@ -87,9 +90,6 @@ importers:
       '@types/prompts':
         specifier: 'catalog:'
         version: 2.4.9
-      eslint:
-        specifier: 'catalog:'
-        version: 9.27.0
       ts-node:
         specifier: 'catalog:'
         version: 10.9.2(@types/node@20.17.47)(typescript@5.8.3)
