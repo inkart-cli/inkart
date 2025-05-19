@@ -1,7 +1,7 @@
 {
   "name": "@inkart/monorepo",
   "type": "module",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "A Node-based scaffolding tool for quickly creating front-end project templates",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
