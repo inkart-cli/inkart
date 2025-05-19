@@ -1,30 +1,33 @@
 // eslint.config.js
 import antfu from '@antfu/eslint-config'
 
-export default antfu({
-// Type of the project. 'lib' for libraries, the default is 'app'
-  type: 'lib',
-
-  // Enable stylistic formatting rules
-  // stylistic: true,
-
-  // Or customize the stylistic rules
-  stylistic: {
-    indent: 2, // 4, or 'tab'
-    quotes: 'single', // or 'double'
+export default antfu(
+  {
+    formatters: true,
+    pnpm: true,
+    ignores: [
+      '**/types',
+      '**/*.svg',
+    ],
   },
-
-  // TypeScript and Vue are autodetected, you can also explicitly enable them:
-  typescript: true,
-  vue: true,
-
-  // Disable jsonc and yaml support
-  jsonc: false,
-  yaml: false,
-
-  // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
-  ignores: [
-    '**/fixtures',
-    // ...globs
-  ]
-})
+  {
+    rules: {
+      'vue/no-deprecated-functional-template': 'off',
+      'vue/one-component-per-file': 'off',
+      'vue/no-template-shadow': 'off',
+      'vue/require-prop-types': 'off',
+      'ts/ban-types': 'off',
+      'node/no-callback-literal': 'off',
+      'import/namespace': 'off',
+      'import/default': 'off',
+      'import/no-named-as-default': 'off',
+      'import/no-named-as-default-member': 'off',
+      'node/prefer-global/process': 'off',
+      'ts/unified-signatures': 'off',
+      'ts/no-unsafe-function-type': 'off',
+      'ts/no-dynamic-delete': 'off',
+      'eqeqeq': 'off',
+      'no-async-promise-executor': 'off',
+    },
+  },
+)
