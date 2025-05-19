@@ -137,3 +137,7 @@ dist
 
 .idea
 .vscode
+packages/**/*.js
+packages/**/*.[cm]js
+packages/**/*.d.ts
+packages/**/*.d.[cm]ts

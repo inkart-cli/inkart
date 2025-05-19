@@ -6,7 +6,7 @@
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo build"
   },
   "publishConfig": {
     "access": "public"

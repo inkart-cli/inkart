@@ -17,11 +17,11 @@ function createRollupConfig() {
     const input = 'index.ts'
     const output: OutputOptions[] = [
         {
-            file: 'cli.mjs',
+            file: 'index.mjs',
             format: 'es'
         },
         {
-            file: 'cli.iife.js',
+            file: 'index.iife.js',
             format: 'iife',
             name: 'CLI',
             extend: true,
@@ -29,7 +29,7 @@ function createRollupConfig() {
             plugins: []
         },
         {
-            file: 'cli.iife.min.js',
+            file: 'index.iife.min.js',
             format: 'iife',
             name: 'CLI',
             extend: true,
