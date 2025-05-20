@@ -1,7 +1,7 @@
 import readline from 'node:readline'
 import chalk from 'chalk'
 import prompts from 'prompts'
-import { defaultName } from '../utils/var'
+import { defaultName, readdirList } from '../utils'
 import path from 'node:path'
 
 export const cmd = 'create [projectName]'
@@ -13,10 +13,18 @@ const root = process.cwd()
 export async function action(projectName: string): Promise<void> {
   projectName = await resolveProjectName(projectName)
   const template = await selectProjectTemplate()
-  console.log(projectName, template)
 
-  const projectPath = path.resolve(root, 'node_modules', template)
-  console.log(root, projectPath)
+  const inkartTemps = path.resolve(root, 'node_modules', '@inkart/temps')
+  const tempDirectories = readdirList(inkartTemps);
+
+  // TODO：没有找到，记得加个提示
+  if (!tempDirectories.includes(template)) return
+  
+  const tempPath = path.resolve(inkartTemps, template)
+  
+  // 将 tempPath 整个文件夹写入到用户当前目录下
+
+  console.log(root, tempPath)
 }
 
 /**
