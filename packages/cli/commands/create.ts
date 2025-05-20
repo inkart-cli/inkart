@@ -2,16 +2,21 @@ import readline from 'node:readline'
 import chalk from 'chalk'
 import prompts from 'prompts'
 import { defaultName } from '../utils/var'
+import path from 'node:path'
 
 export const cmd = 'create [projectName]'
 export const cmdDesc = 'create new template'
 export const opt = ''
 export const optDesc = ''
+const root = process.cwd()
 
 export async function action(projectName: string): Promise<void> {
   projectName = await resolveProjectName(projectName)
   const template = await selectProjectTemplate()
   console.log(projectName, template)
+
+  const projectPath = path.resolve(root, 'node_modules', template)
+  console.log(root, projectPath)
 }
 
 /**

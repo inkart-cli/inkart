@@ -2,6 +2,7 @@ packages:
   - 'packages/*'
 catalog:
   '@antfu/eslint-config': ^4.13.1
+  '@inkart/temps': 0.0.2
   '@rollup/plugin-json': ^6.1.0
   '@types/node': ^20.8.10
   '@types/prompts': ^2.4.9

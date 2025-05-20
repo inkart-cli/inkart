@@ -28,6 +28,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@inkart/temps": "catalog:",
     "@rollup/plugin-json": "catalog:",
     "cac": "catalog:",
     "chalk": "catalog:",
