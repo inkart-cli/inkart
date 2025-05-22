@@ -3,27 +3,30 @@ import chalk from 'chalk'
 import prompts from 'prompts'
 import { defaultName, readdirList } from '../utils'
 import path from 'node:path'
+import { fileURLToPath } from 'url';
 
 export const cmd = 'create [projectName]'
 export const cmdDesc = 'create new template'
 export const opt = ''
 export const optDesc = ''
 const root = process.cwd()
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export async function action(projectName: string): Promise<void> {
   projectName = await resolveProjectName(projectName)
   const template = await selectProjectTemplate()
 
-  const inkartTemps = path.resolve(root, 'node_modules', '@inkart/temps')
+  const inkartTemps = path.resolve(__dirname, '../node_modules', '@inkart/temps')
+
   const tempDirectories = readdirList(inkartTemps);
 
-  // TODO：没有找到，记得加个提示
+  // // TODO：没有找到，记得加个提示
   if (!tempDirectories.includes(template)) return
   
   const tempPath = path.resolve(inkartTemps, template)
   
   // 将 tempPath 整个文件夹写入到用户当前目录下
-
   console.log(root, tempPath)
 }
 

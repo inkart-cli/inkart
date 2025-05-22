@@ -74,6 +74,9 @@ importers:
       '@rollup/plugin-json':
         specifier: 'catalog:'
         version: 6.1.0(rollup@4.41.0)
+      '@types/prompts':
+        specifier: 'catalog:'
+        version: 2.4.9
       cac:
         specifier: 'catalog:'
         version: 6.7.14
@@ -90,15 +93,9 @@ importers:
         specifier: 'catalog:'
         version: 6.2.1(esbuild@0.25.4)(rollup@4.41.0)
     devDependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 20.17.47
-      '@types/prompts':
-        specifier: 'catalog:'
-        version: 2.4.9
       ts-node:
         specifier: 'catalog:'
-        version: 10.9.2(@types/node@20.17.47)(typescript@5.8.3)
+        version: 10.9.2(@types/node@22.15.19)(typescript@5.8.3)
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -3803,14 +3800,14 @@ snapshots:
     dependencies:
       typescript: 5.8.3
 
-  ts-node@10.9.2(@types/node@20.17.47)(typescript@5.8.3):
+  ts-node@10.9.2(@types/node@22.15.19)(typescript@5.8.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.17.47
+      '@types/node': 22.15.19
       acorn: 8.14.1
       acorn-walk: 8.3.4
       arg: 4.1.3

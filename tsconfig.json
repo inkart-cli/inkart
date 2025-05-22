@@ -1,17 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "ESNext",
     "jsx": "preserve",
     "lib": ["ESNext", "DOM", "DOM.Iterable", "webworker"],
     "baseUrl": ".",
     "rootDir": ".",
-    "module": "esnext",
-    "moduleResolution": "Bundler",
-    "paths": {
-    },
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
-    "types": [
-    ],
     "strict": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,

@@ -7,11 +7,9 @@
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
   "keywords": [],
-  "main": "./index.mjs",
-  "module": "./index.mjs",
-  "unpkg": "./index.iife.min.js",
-  "jsdelivr": "./index.iife.min.js",
-  "types": "./index.d.mts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "bin": {
     "create": "./index.mjs"
   },
@@ -28,6 +26,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@types/prompts": "catalog:",
     "@inkart/temps": "catalog:",
     "@rollup/plugin-json": "catalog:",
     "cac": "catalog:",
@@ -37,8 +36,6 @@
     "rollup-plugin-esbuild": "catalog:"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
-    "@types/prompts": "catalog:",
     "ts-node": "catalog:",
     "typescript": "catalog:"
   }
