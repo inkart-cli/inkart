@@ -1,6 +1,4 @@
-<div style="display: flex; justify-content: center;" >
-    <img style="width: 50%;" src="./public/inkart.png" >
-</div>
+<center><img style="width: 25%;" src="./public/inkart.png"></center>
 
 InkArt is a Node-based scaffolding tool for quickly creating front-end project templates
 
