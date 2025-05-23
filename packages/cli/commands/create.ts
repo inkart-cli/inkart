@@ -1,10 +1,10 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import readline from 'node:readline'
+import { fileURLToPath } from 'node:url'
 import chalk from 'chalk'
 import prompts from 'prompts'
 import { defaultName } from '../utils'
-import path from 'node:path'
-import { fileURLToPath } from 'url';
-import fs from 'node:fs'
 import { copyDirectory, existsFile } from '../utils/fs'
 
 export const cmd = 'create [projectName]'
@@ -12,8 +12,8 @@ export const cmdDesc = 'create new template'
 export const opt = ''
 export const optDesc = ''
 const root = process.cwd()
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export async function action(projectName: string): Promise<void> {
   // User input info
@@ -25,8 +25,10 @@ export async function action(projectName: string): Promise<void> {
   const targetPath = path.resolve(root, projectName)
   const tempPath = path.resolve(inkartTemps, template)
 
-  if (!existsFile(tempPath)) return console.log(chalk.red(`Template "${template}" not found.`))
-  if (existsFile(targetPath)) return console.log(chalk.yellow(`Project "${projectName}" already exists.`))
+  if (!existsFile(tempPath))
+    return console.log(chalk.red(`Template "${template}" not found.`))
+  if (existsFile(targetPath))
+    return console.log(chalk.yellow(`Project "${projectName}" already exists.`))
 
   console.log(tempPath, targetPath)
 
