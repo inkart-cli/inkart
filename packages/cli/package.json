@@ -6,7 +6,12 @@
   "description": "A Node-based scaffolding tool for quickly creating front-end project templates",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "inkart",
+    "cli",
+    "node cli",
+    "templates"
+  ],
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
@@ -26,9 +31,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@types/prompts": "catalog:",
     "@inkart/temps": "catalog:",
     "@rollup/plugin-json": "catalog:",
+    "@types/prompts": "catalog:",
     "cac": "catalog:",
     "chalk": "catalog:",
     "prompts": "catalog:",

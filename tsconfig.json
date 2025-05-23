@@ -20,7 +20,7 @@
   },
   "include": [
     "*.ts",
-    "packages"
+    "packages/cli/*"
   ],
   "exclude": [
     "node_modules",

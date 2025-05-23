@@ -1,9 +1,11 @@
 import readline from 'node:readline'
 import chalk from 'chalk'
 import prompts from 'prompts'
-import { defaultName, readdirList } from '../utils'
+import { defaultName } from '../utils'
 import path from 'node:path'
 import { fileURLToPath } from 'url';
+import fs from 'node:fs'
+import { copyDirectory, existsFile } from '../utils/fs'
 
 export const cmd = 'create [projectName]'
 export const cmdDesc = 'create new template'
@@ -14,20 +16,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export async function action(projectName: string): Promise<void> {
+  // User input info
   projectName = await resolveProjectName(projectName)
   const template = await selectProjectTemplate()
-
   const inkartTemps = path.resolve(__dirname, '../node_modules', '@inkart/temps')
 
-  const tempDirectories = readdirList(inkartTemps);
-
-  // // TODO：没有找到，记得加个提示
-  if (!tempDirectories.includes(template)) return
-  
+  // template path && write target path
+  const targetPath = path.resolve(root, projectName)
   const tempPath = path.resolve(inkartTemps, template)
-  
-  // 将 tempPath 整个文件夹写入到用户当前目录下
-  console.log(root, tempPath)
+
+  if (!existsFile(tempPath)) return console.log(chalk.red(`Template "${template}" not found.`))
+  if (existsFile(targetPath)) return console.log(chalk.yellow(`Project "${projectName}" already exists.`))
+
+  console.log(tempPath, targetPath)
+
+  // Create project directory
+  fs.mkdirSync(targetPath, { recursive: true })
+
+  copyDirectory(tempPath, targetPath)
 }
 
 /**
@@ -50,7 +56,7 @@ function resolveProjectName(projectName: string): Promise<string> {
       })
 
       rl.question(chalk.cyan('🍔 Please enter project name: ') + chalk.gray(`${defaultName}`), (input: string) => {
-        projectName = input.trim() ?? defaultName
+        projectName = input.trim() || defaultName
         rl.close()
         resolve(projectName)
       })

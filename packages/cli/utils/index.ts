@@ -1,2 +1,2 @@
-export * from './var'
 export * from './command'
+export * from './var'
