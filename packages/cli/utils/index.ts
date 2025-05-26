@@ -1,2 +1,2 @@
-export * from './command'
+export * from './fs'
 export * from './var'
