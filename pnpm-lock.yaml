@@ -5,13 +5,10 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
-  default:
+  dev:
     '@antfu/eslint-config':
       specifier: ^4.13.1
       version: 4.13.1
-    '@inkart/temps':
-      specifier: 0.0.2
-      version: 0.0.2
     '@rollup/plugin-json':
       specifier: ^6.1.0
       version: 6.1.0
@@ -21,21 +18,12 @@ catalogs:
     '@types/prompts':
       specifier: ^2.4.9
       version: 2.4.9
-    cac:
-      specifier: ^6.7.14
-      version: 6.7.14
-    chalk:
-      specifier: ^5.4.1
-      version: 5.4.1
     eslint:
       specifier: ^9.27.0
       version: 9.27.0
     eslint-plugin-format:
       specifier: ^1.0.1
       version: 1.0.1
-    prompts:
-      specifier: ^2.4.2
-      version: 2.4.2
     rollup:
       specifier: ^4.41.0
       version: 4.41.0
@@ -48,56 +36,66 @@ catalogs:
     typescript:
       specifier: ^5.2.2
       version: 5.8.3
+  prod:
+    cac:
+      specifier: ^6.7.14
+      version: 6.7.14
+    chalk:
+      specifier: ^5.4.1
+      version: 5.4.1
+    prompts:
+      specifier: ^2.4.2
+      version: 2.4.2
 
 importers:
 
   .:
     devDependencies:
       '@antfu/eslint-config':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 4.13.1(@vue/compiler-sfc@3.5.14)(eslint-plugin-format@1.0.1(eslint@9.27.0))(eslint@9.27.0)(typescript@5.8.3)
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 20.17.47
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.27.0
       eslint-plugin-format:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 1.0.1(eslint@9.27.0)
 
   packages/cli:
     dependencies:
       '@inkart/temps':
-        specifier: 'catalog:'
-        version: 0.0.2
-      '@rollup/plugin-json':
-        specifier: 'catalog:'
-        version: 6.1.0(rollup@4.41.0)
-      '@types/prompts':
-        specifier: 'catalog:'
-        version: 2.4.9
+        specifier: workspace:^
+        version: link:../templates
       cac:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 6.7.14
       chalk:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 5.4.1
       prompts:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.4.2
+    devDependencies:
+      '@rollup/plugin-json':
+        specifier: catalog:dev
+        version: 6.1.0(rollup@4.41.0)
+      '@types/prompts':
+        specifier: catalog:dev
+        version: 2.4.9
       rollup:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 4.41.0
       rollup-plugin-esbuild:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 6.2.1(esbuild@0.25.4)(rollup@4.41.0)
-    devDependencies:
       ts-node:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 10.9.2(@types/node@22.15.19)(typescript@5.8.3)
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.8.3
 
   packages/templates: {}
@@ -443,9 +441,6 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
-
-  '@inkart/temps@0.0.2':
-    resolution: {integrity: sha512-dn4JGBcjpVCh0IZAztI3OI6tyy9kU1B14zJYuZg/S1P8rlIXuPQ73tm9PT7s/z+rY5YweoiO+HZ9czlhYjnbXA==}
 
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
@@ -2220,8 +2215,6 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
-
-  '@inkart/temps@0.0.2': {}
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
