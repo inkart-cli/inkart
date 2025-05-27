@@ -39,8 +39,8 @@
   },
   "devDependencies": {
     "@types/prompts": "catalog:dev",
-    "tsdown": "catalog:dev",
     "ts-node": "catalog:dev",
+    "tsdown": "catalog:dev",
     "typescript": "catalog:dev"
   }
 }
