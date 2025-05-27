@@ -6,6 +6,7 @@ catalogs:
     '@antfu/eslint-config': ^4.13.1
     '@types/node': ^20.8.10
     '@types/prompts': ^2.4.9
+    tsx: ^4.19.2
     eslint: ^9.27.0
     eslint-plugin-format: ^1.0.1
     ts-node: ^10.9.1
