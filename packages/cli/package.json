@@ -16,12 +16,11 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "create": "./index.mjs"
+    "create": "./index.js"
   },
   "files": [
-    "*.d.mts",
-    "*.js",
-    "*.mjs"
+    "*.d.ts",
+    "*.js"
   ],
   "scripts": {
     "dev": "tsdown --watch",
@@ -39,8 +38,8 @@
   },
   "devDependencies": {
     "@types/prompts": "catalog:dev",
-    "ts-node": "catalog:dev",
     "tsdown": "catalog:dev",
+    "ts-node": "catalog:dev",
     "typescript": "catalog:dev"
   }
 }
