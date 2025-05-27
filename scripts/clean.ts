@@ -8,7 +8,14 @@ const items = result.split('\n')
   .filter(Boolean)
   .filter(i => !['node_modules', '.eslintcache', '.md', 'public'].some(j => i.includes(j)))
 
-for (const item of items) {
-  console.log(`Removing ${item}`)
-  await fs.rm(item, { force: true, recursive: true })
-}
+;(async () => {
+  for (const item of items) {
+    try {
+      console.log(`Removing ${item}`)
+      await fs.rm(item, { force: true, recursive: true })
+    }
+    catch (error) {
+      console.error(`Failed to remove ${item}:`, error)
+    }
+  }
+})()

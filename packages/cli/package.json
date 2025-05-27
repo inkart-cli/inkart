@@ -31,17 +31,17 @@
     "access": "public"
   },
   "dependencies": {
-    "@inkart/temps": "catalog:",
-    "@rollup/plugin-json": "catalog:",
-    "@types/prompts": "catalog:",
-    "cac": "catalog:",
-    "chalk": "catalog:",
-    "prompts": "catalog:",
-    "rollup": "catalog:",
-    "rollup-plugin-esbuild": "catalog:"
+    "@inkart/temps": "workspace:^",
+    "cac": "catalog:prod",
+    "chalk": "catalog:prod",
+    "prompts": "catalog:prod"
   },
   "devDependencies": {
-    "ts-node": "catalog:",
-    "typescript": "catalog:"
+    "@rollup/plugin-json": "catalog:dev",
+    "@types/prompts": "catalog:dev",
+    "rollup": "catalog:dev",
+    "rollup-plugin-esbuild": "catalog:dev",
+    "ts-node": "catalog:dev",
+    "typescript": "catalog:dev"
   }
 }
