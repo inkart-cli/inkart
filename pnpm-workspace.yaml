@@ -6,15 +6,13 @@ catalogs:
     '@antfu/eslint-config': ^4.13.1
     '@types/node': ^20.8.10
     '@types/prompts': ^2.4.9
-    tsx: ^4.19.2
     eslint: ^9.27.0
     eslint-plugin-format: ^1.0.1
     ts-node: ^10.9.1
-    tsdown: "^0.12.3"
+    tsdown: ^0.12.3
+    tsx: ^4.19.2
     typescript: ^5.2.2
   prod:
     cac: ^6.7.14
     chalk: ^5.4.1
     prompts: ^2.4.2
-
-
