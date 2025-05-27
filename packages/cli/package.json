@@ -12,9 +12,9 @@
     "node cli",
     "templates"
   ],
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "bin": {
     "create": "./index.mjs"
   },
@@ -24,7 +24,8 @@
     "*.mjs"
   ],
   "scripts": {
-    "build": "rollup --config=rollup.config.ts --configPlugin=rollup-plugin-esbuild",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
     "prepack": "pnpm run build"
   },
   "publishConfig": {
@@ -37,10 +38,8 @@
     "prompts": "catalog:prod"
   },
   "devDependencies": {
-    "@rollup/plugin-json": "catalog:dev",
     "@types/prompts": "catalog:dev",
-    "rollup": "catalog:dev",
-    "rollup-plugin-esbuild": "catalog:dev",
+    "tsdown": "catalog:dev",
     "ts-node": "catalog:dev",
     "typescript": "catalog:dev"
   }
