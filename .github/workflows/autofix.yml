@@ -23,18 +23,13 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Setup
+        run: npm i -g @antfu/ni
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          registry-url: https://registry.npmjs.org/
-          cache: pnpm
-
-      - run: pnpm install
+      - name: Install
+        run: nci
 
       - name: Lint
-        run: pnpm lint:fix
+        run: nr lint --fix
 
       - uses: autofix-ci/action@8bc06253bec489732e5f9c52884c7cace15c0160
