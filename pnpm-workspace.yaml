@@ -7,12 +7,12 @@ catalogs:
     '@rollup/plugin-json': ^6.1.0
     '@types/node': ^20.8.10
     '@types/prompts': ^2.4.9
-    tsx: ^4.19.2
     eslint: ^9.27.0
     eslint-plugin-format: ^1.0.1
     rollup: ^4.41.0
     rollup-plugin-esbuild: ^6.2.1
     ts-node: ^10.9.1
+    tsx: ^4.19.2
     typescript: ^5.2.2
   prod:
     cac: ^6.7.14
