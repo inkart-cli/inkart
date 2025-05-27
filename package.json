@@ -17,6 +17,7 @@
     "@antfu/eslint-config": "catalog:dev",
     "@types/node": "catalog:dev",
     "eslint": "catalog:dev",
-    "eslint-plugin-format": "catalog:dev"
+    "eslint-plugin-format": "catalog:dev",
+    "tsx": "catalog:dev"
   }
 }

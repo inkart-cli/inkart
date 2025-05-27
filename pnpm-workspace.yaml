@@ -10,10 +10,9 @@ catalogs:
     eslint-plugin-format: ^1.0.1
     ts-node: ^10.9.1
     tsdown: "^0.12.3"
+    tsx: ^4.19.2
     typescript: ^5.2.2
   prod:
     cac: ^6.7.14
     chalk: ^5.4.1
     prompts: ^2.4.2
-
-
