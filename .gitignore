@@ -142,5 +142,4 @@ packages/**/*.[cm]js
 packages/**/*.d.ts
 packages/**/*.d.[cm]ts
 
-pnpm-lock.yaml
 package-lock.json
