@@ -24,3 +24,13 @@ Creating a new front-end project from scratch can be time-consuming and error-pr
 - Optimized build and deployment configurations
 
 Whether you're starting a new project or looking to standardize your development process, InkArt helps you get up and running quickly with a solid foundation based on proven project structures.
+
+### Usage
+
+```bash
+npx @inkart/cli create
+
+# or
+
+pnpx @inkart/cli create
+```
