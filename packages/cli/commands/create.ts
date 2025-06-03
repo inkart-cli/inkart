@@ -18,11 +18,11 @@ export async function action(projectName: string): Promise<void> {
   // User input info
   projectName = await resolveProjectName(projectName)
   const template = await selectProjectTemplate()
-  const inkartTemps = path.resolve(__dirname, '../node_modules', '@inkart/temps')
+  const inkartTemps = fileURLToPath(import.meta.resolve('@inkart/temps'))
 
   // template path && write target path
   const targetPath = path.resolve(root, projectName)
-  const tempPath = path.resolve(inkartTemps, template)
+  const tempPath = path.resolve(inkartTemps, `../${template}`)
 
   if (!existsFile(tempPath))
     return console.log(chalk.red(`Template "${template}" not found.`))

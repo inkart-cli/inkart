@@ -6,6 +6,7 @@
   "description": "Front-End project templates for Inkart",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
+  "main": "index.js",
   "files": ["*"],
   "scripts": {
     "build": "echo build",
