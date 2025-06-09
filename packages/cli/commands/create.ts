@@ -27,9 +27,6 @@ export async function action(projectName: string): Promise<void> {
     return console.log(chalk.red(`Template "${template}" not found.`))
   if (existsFile(targetPath))
     return console.log(chalk.yellow(`Project "${projectName}" already exists.`))
-
-  console.log(tempPath, targetPath)
-
   // Create project directory
   fs.mkdirSync(targetPath, { recursive: true })
 
