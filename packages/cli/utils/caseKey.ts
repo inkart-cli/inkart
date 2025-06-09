@@ -1,3 +1,3 @@
-export function upperCaseFirstWord(str: string){
-    return str[0].toUpperCase() + str.substring(1)
+export function upperCaseFirstWord(str: string) {
+  return str[0].toUpperCase() + str.substring(1)
 }
