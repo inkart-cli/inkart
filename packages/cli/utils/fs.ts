@@ -43,17 +43,17 @@ export function copyDirectory(source: string, destination: string) {
  * Get path sub folders
  */
 interface FolderInfo {
-  title: string,
-  value: string,
+  title: string
+  value: string
 }
 export function getFolders(target: string): FolderInfo[] {
-  const subFolders = [];
+  const subFolders = []
   const files = fs.readdirSync(target)
   for (const file of files) {
     const filePath = path.join(target, file)
     const fileStat = fs.statSync(filePath)// 文件信息
     if (fileStat.isDirectory()) {
-      subFolders.push({title: file, value: upperCaseFirstWord(file)})
+      subFolders.push({ title: file, value: upperCaseFirstWord(file) })
     }
   }
   return subFolders
