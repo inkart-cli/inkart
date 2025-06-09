@@ -4,21 +4,20 @@ import readline from 'node:readline'
 import { fileURLToPath } from 'node:url'
 import chalk from 'chalk'
 import prompts from 'prompts'
-import { copyDirectory, defaultName, existsFile } from '../utils'
+import { copyDirectory, defaultName, existsFile, getFolders } from '../utils'
 
 export const cmd = 'create [projectName]'
 export const cmdDesc = 'create new template'
 export const opt = ''
 export const optDesc = ''
 const root = process.cwd()
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const inkartTemps = fileURLToPath(import.meta.resolve('@inkart/temps'))
+const subFolders = getFolders(path.resolve(inkartTemps, '../'))
 
 export async function action(projectName: string): Promise<void> {
   // User input info
   projectName = await resolveProjectName(projectName)
   const template = await selectProjectTemplate()
-  const inkartTemps = fileURLToPath(import.meta.resolve('@inkart/temps'))
 
   // template path && write target path
   const targetPath = path.resolve(root, projectName)
@@ -77,15 +76,13 @@ function resolveProjectName(projectName: string): Promise<string> {
 function selectProjectTemplate(): Promise<string> {
   return new Promise(async (resolve, reject) => {
     try {
+      console.log(subFolders)
       const { template } = await prompts({
         type: 'select',
         name: 'template',
         message: chalk.cyan('🍟 Please select the project template'),
         hint: `- choose: ⬆ + ⬇; Enter: selected.`,
-        choices: [{
-          title: 'Monorepo',
-          value: 'monorepo',
-        }],
+        choices: subFolders,
         initial: 0,
       })
 
