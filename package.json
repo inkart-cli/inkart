@@ -1,14 +1,16 @@
 {
   "name": "@inkart/monorepo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "packageManager": "pnpm@10.11.0",
   "description": "A Node-based scaffolding tool for quickly creating front-end project templates",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
+  "homepage": "https://github.com/inkart-cli/inkart",
   "scripts": {
     "build": "pnpm -r run build",
     "clean": "tsx scripts/clean.ts",
+    "update:v": "tsx scripts/updated.ts",
     "publish:ci": "tsx scripts/publish.ts",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
