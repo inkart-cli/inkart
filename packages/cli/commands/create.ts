@@ -73,7 +73,6 @@ function resolveProjectName(projectName: string): Promise<string> {
 function selectProjectTemplate(): Promise<string> {
   return new Promise(async (resolve, reject) => {
     try {
-      console.log(subFolders)
       const { template } = await prompts({
         type: 'select',
         name: 'template',
