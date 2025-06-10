@@ -1,13 +1,15 @@
 {
   "name": "@inkart/temps",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.0-alpha.03",
   "packageManager": "pnpm@10.11.0",
   "description": "Front-End project templates for Inkart",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
   "main": "index.js",
-  "files": ["*"],
+  "files": [
+    "*"
+  ],
   "scripts": {
     "build": "echo build",
     "prepack": "pnpm run build"
