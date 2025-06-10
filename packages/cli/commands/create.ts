@@ -6,7 +6,7 @@ import chalk from 'chalk'
 import prompts from 'prompts'
 import { copyDirectory, defaultName, existsFile, getFolders } from '../utils'
 
-export const cmd = 'create [projectName]'
+export const cmd = '[projectName]'
 export const cmdDesc = 'create new template'
 export const opt = ''
 export const optDesc = ''

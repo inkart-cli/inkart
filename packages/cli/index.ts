@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import cac from 'cac'
 import cmdList from './commands'
 import { version } from './package.json'
