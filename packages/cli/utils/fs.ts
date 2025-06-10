@@ -1,6 +1,15 @@
+import type { FolderInfo } from '../types/fs'
 import fs from 'node:fs'
 import path from 'node:path'
 import { upperCaseFirstWord } from './caseKey'
+
+/**
+ * Create project directory
+ * @param targetPath
+ */
+export function createProjectFile(targetPath: string) {
+  fs.mkdirSync(targetPath, { recursive: true })
+}
 
 /**
  * Check if a file exists
@@ -42,10 +51,6 @@ export function copyDirectory(source: string, destination: string) {
 /**
  * Get path sub folders
  */
-interface FolderInfo {
-  title: string
-  value: string
-}
 export function getFolders(target: string): FolderInfo[] {
   const subFolders = []
   const files = fs.readdirSync(target)

@@ -1,3 +1,6 @@
+export * from './alias'
 export * from './caseKey'
 export * from './fs'
+export * from './projectName'
+export * from './select'
 export * from './var'
