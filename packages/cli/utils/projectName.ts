@@ -19,7 +19,7 @@ export function resolveProjectName(projectName: string): Promise<string> {
       const { name } = await prompts({
         type: 'text',
         name: 'name',
-        message: chalk.cyan('🚧 Project name:'),
+        message: chalk.cyan('🍔 Please enter project name:'),
         initial: defaultName,
         style: 'default',
         format: (value: string) => value.trim(),
