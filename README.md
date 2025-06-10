@@ -34,3 +34,9 @@ npx @inkart/cli create
 
 pnpx @inkart/cli create
 ```
+
+### Contributors
+
+Thank you to everyone who contributed to this project.
+
+[![inkart](https://contrib.rocks/image?repo=inkart-cli/inkart)](https://github.com/inkart-cli/inkart/graphs/contributors)
