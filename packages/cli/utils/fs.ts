@@ -53,7 +53,7 @@ export function getFolders(target: string): FolderInfo[] {
     const filePath = path.join(target, file)
     const fileStat = fs.statSync(filePath)// 文件信息
     if (fileStat.isDirectory()) {
-      subFolders.push({ title: file, value: upperCaseFirstWord(file) })
+      subFolders.push({ title: upperCaseFirstWord(file), value: file })
     }
   }
   return subFolders
