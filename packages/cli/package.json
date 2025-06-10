@@ -16,7 +16,7 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "create": "./bin/inkart.js"
+    "inkart": "./bin/inkart.js"
   },
   "files": [
     "*.d.ts",
