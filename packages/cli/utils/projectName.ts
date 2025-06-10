@@ -1,5 +1,5 @@
-import readline from 'node:readline'
 import chalk from 'chalk'
+import prompts from 'prompts'
 import { defaultName } from './var'
 
 /**
@@ -10,22 +10,21 @@ import { defaultName } from './var'
  * @description get project name
  */
 export function resolveProjectName(projectName: string): Promise<string> {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     try {
       if (projectName != undefined) {
         return resolve(projectName)
       }
 
-      const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout,
+      const { name } = await prompts({
+        type: 'text',
+        name: 'name',
+        message: chalk.cyan('🚧 Project name:'),
+        initial: defaultName,
+        style: 'default',
+        format: (value: string) => value.trim(),
       })
-
-      rl.question(chalk.cyan('🍔 Please enter project name: ') + chalk.gray(`${defaultName}`), (input: string) => {
-        projectName = input.trim() || defaultName
-        rl.close()
-        resolve(projectName)
-      })
+      resolve(name)
     }
     catch (error) {
       reject(error)
