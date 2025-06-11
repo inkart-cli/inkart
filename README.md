@@ -40,3 +40,7 @@ pnpx @inkart/cli create
 Thank you to everyone who contributed to this project.
 
 [![inkart](https://contrib.rocks/image?repo=inkart-cli/inkart)](https://github.com/inkart-cli/inkart/graphs/contributors)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=inkart-cli/inkart.git&type=Date)](https://www.star-history.com/#inkart-cli/inkart.git&Date)
