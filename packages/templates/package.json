@@ -5,6 +5,11 @@
   "packageManager": "pnpm@10.11.0",
   "description": "Front-End project templates for Inkart",
   "author": "青椒肉丝<https://github.com/pkc918>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inkart-cli/inkart.git",
+    "directory": "packages/templates"
+  },
   "license": "MIT",
   "main": "index.js",
   "files": [
