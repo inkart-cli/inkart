@@ -21,5 +21,9 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/inkart-cli/inkart/issues"
+  },
+  "homepage": "https://github.com/inkart-cli/inkart/tree/main/packages/templates"
 }

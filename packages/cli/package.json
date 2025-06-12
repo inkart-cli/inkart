@@ -32,6 +32,10 @@
     "build": "tsdown",
     "prepack": "pnpm run build"
   },
+  "bugs": {
+    "url": "https://github.com/inkart-cli/inkart/issues"
+  },
+  "homepage": "https://github.com/inkart-cli/inkart/blob/main/packages/cli",
   "publishConfig": {
     "access": "public"
   },
