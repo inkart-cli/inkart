@@ -1,6 +1,6 @@
 name: Others
 
-description: Create an issue for earthworm
+description: Create an issue for inkart
 
 body:
   - type: textarea
