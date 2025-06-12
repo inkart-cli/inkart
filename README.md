@@ -43,4 +43,4 @@ Thank you to everyone who contributed to this project.
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=inkart-cli/inkart.git&type=Date)](https://www.star-history.com/#inkart-cli/inkart.git&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=inkart-cli/inkart&type=Date)](https://www.star-history.com/#inkart-cli/inkart&Date)
