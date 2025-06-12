@@ -35,8 +35,23 @@ npx @inkart/cli create
 pnpx @inkart/cli create
 ```
 
+```bash
+npm i -g @inkart/cli
+
+# any where
+inkart create
+```
+
 ### Contributors
 
 Thank you to everyone who contributed to this project.
 
 [![inkart](https://contrib.rocks/image?repo=inkart-cli/inkart)](https://github.com/inkart-cli/inkart/graphs/contributors)
+
+### Star History
+
+![Star History Chart](https://api.star-history.com/svg?repos=inkart-cli/inkart&type=Date)
+
+---
+
+[<img style="height:10px;" src="https://auto-plugin.github.io/dependens/ico.svg"> `Auto-Plugin 开源联盟`](https://github.com/Auto-Plugin)

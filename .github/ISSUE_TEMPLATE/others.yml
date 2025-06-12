@@ -1,6 +1,14 @@
 name: Others
 
+<<<<<<< CorrectTemp
 description: Create an issue for inkart
+=======
+<<<<<<< HEAD
+description: Create an issue for earthworm
+=======
+description: Create an issue for inkart
+>>>>>>> 1b80fcd (feat：correct template path resolution)
+>>>>>>> main
 
 body:
   - type: textarea
