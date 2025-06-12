@@ -4,10 +4,6 @@
 
 **InkArt** is a Node-based scaffolding tool for quickly creating front-end project templates
 
-### Star History
-
-![Star History Chart](https://api.star-history.com/svg?repos=inkart-cli/inkart&type=Date)
-
 ### Introduction
 
 InkArt is a powerful scaffolding tool designed to help developers quickly bootstrap high-quality front-end projects. It analyzes and extracts best practices from popular open-source projects, transforming them into reusable templates that follow modern engineering standards.
@@ -51,6 +47,10 @@ inkart create
 Thank you to everyone who contributed to this project.
 
 [![inkart](https://contrib.rocks/image?repo=inkart-cli/inkart)](https://github.com/inkart-cli/inkart/graphs/contributors)
+
+### Star History
+
+![Star History Chart](https://api.star-history.com/svg?repos=inkart-cli/inkart&type=Date)
 
 ---
 
