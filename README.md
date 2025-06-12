@@ -35,6 +35,13 @@ npx @inkart/cli create
 pnpx @inkart/cli create
 ```
 
+```bash
+npm i -g @inkart/cli
+
+# any where
+inkart create
+```
+
 ### Contributors
 
 Thank you to everyone who contributed to this project.
