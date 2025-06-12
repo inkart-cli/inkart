@@ -6,10 +6,14 @@
   "description": "Front-End project templates for Inkart",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
+  "homepage": "https://github.com/inkart-cli/inkart/tree/main/packages/templates",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/inkart-cli/inkart.git",
     "directory": "packages/templates"
+  },
+  "bugs": {
+    "url": "https://github.com/inkart-cli/inkart/issues"
   },
   "main": "index.js",
   "files": [
@@ -21,9 +25,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "bugs": {
-    "url": "https://github.com/inkart-cli/inkart/issues"
-  },
-  "homepage": "https://github.com/inkart-cli/inkart/tree/main/packages/templates"
+  }
 }
