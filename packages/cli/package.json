@@ -6,10 +6,14 @@
   "description": "A Node-based scaffolding tool for quickly creating front-end project templates",
   "author": "青椒肉丝<https://github.com/pkc918>",
   "license": "MIT",
+  "homepage": "https://github.com/inkart-cli/inkart/blob/main/packages/cli",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/inkart-cli/inkart.git",
     "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/inkart-cli/inkart/issues"
   },
   "keywords": [
     "inkart",
@@ -32,10 +36,6 @@
     "build": "tsdown",
     "prepack": "pnpm run build"
   },
-  "bugs": {
-    "url": "https://github.com/inkart-cli/inkart/issues"
-  },
-  "homepage": "https://github.com/inkart-cli/inkart/blob/main/packages/cli",
   "publishConfig": {
     "access": "public"
   },
