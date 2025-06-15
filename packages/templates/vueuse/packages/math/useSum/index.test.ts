@@ -1,0 +1,26 @@
+import { describe, expect, it } from 'vitest'
+import { ref as deepRef, shallowRef } from 'vue'
+import { useSum } from './index'
+
+describe('useSum', () => {
+  it('should be defined', () => {
+    expect(useSum).toBeDefined()
+  })
+
+  it('array usage', () => {
+    const array = deepRef([1, 2, 3, 4])
+    const sum = useSum(array)
+    expect(sum.value).toBe(10)
+    array.value = [-1, -2, 3, 4]
+    expect(sum.value).toBe(4)
+  })
+
+  it('rest usage', () => {
+    const a = shallowRef(1)
+    const b = shallowRef(2)
+    const sum = useSum(a, () => b.value, 3)
+    expect(sum.value).toBe(6)
+    b.value = 3
+    expect(sum.value).toBe(7)
+  })
+})

@@ -1,0 +1,49 @@
+{
+  "name": "@vueuse/components",
+  "type": "module",
+  "version": "13.3.0",
+  "description": "Renderless components for VueUse",
+  "author": "Jacob Clevenger<https://github.com/wheatjs>",
+  "license": "MIT",
+  "homepage": "https://github.com/vueuse/vueuse/tree/main/packages/components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vueuse/vueuse.git",
+    "directory": "packages/components"
+  },
+  "bugs": {
+    "url": "https://github.com/vueuse/vueuse/issues"
+  },
+  "keywords": [
+    "vue",
+    "vue-use",
+    "utils"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./index.mjs",
+    "./*": "./*"
+  },
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "unpkg": "./index.iife.min.js",
+  "jsdelivr": "./index.iife.min.js",
+  "types": "./index.d.mts",
+  "files": [
+    "*.d.mts",
+    "*.js",
+    "*.mjs"
+  ],
+  "scripts": {
+    "build": "rollup --config=rollup.config.ts --configPlugin=rollup-plugin-esbuild",
+    "prepack": "pnpm run build",
+    "test:attw": "attw --pack --config-path ../../.attw.json ."
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@vueuse/core": "workspace:*",
+    "@vueuse/shared": "workspace:*"
+  }
+}

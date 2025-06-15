@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "webworker"],
+    "baseUrl": ".",
+    "rootDir": ".",
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@vueuse/core": ["./packages/core/index.ts"],
+      "@vueuse/core/*": ["./packages/core/*"],
+      "@vueuse/integrations": ["./packages/integrations/index.ts"],
+      "@vueuse/metadata": ["./packages/metadata/index.ts"],
+      "@vueuse/math": ["./packages/math/index.ts"],
+      "@vueuse/shared": ["./packages/shared/index.ts"],
+      "@vueuse/shared/*": ["./packages/shared/*"],
+      "@vueuse/components": ["./packages/components/index.ts"],
+      "@vueuse/components/*": ["./packages/components/*"],
+      "@vueuse/rxjs": ["./packages/rxjs/index.ts"],
+      "@vueuse/rxjs/*": ["./packages/rxjs/*"]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "@types/web-bluetooth",
+      "@vitest/browser/providers/playwright",
+      "vite-plugin-pwa/vue",
+      "vitest",
+      "vitest-browser-vue"
+    ],
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "declarationDir": "./types",
+    "esModuleInterop": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "*.ts",
+    "packages",
+    "packages/.vitepress/components/*.vue",
+    "packages/.vitepress/*.ts",
+    "meta",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "unocss.config.ts",
+    "node_modules",
+    "**/*.md",
+    "**/dist",
+    "packages/.test",
+    "packages/_docs"
+  ]
+}
