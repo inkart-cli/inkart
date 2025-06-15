@@ -10,6 +10,7 @@ export default antfu(
     ignores: [
       '**/types',
       '**/*.svg',
+      'packages/templates/**',
     ],
   },
   {
