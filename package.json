@@ -1,6 +1,6 @@
 {
   "name": "@inkart/monorepo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": true,
   "packageManager": "pnpm@10.11.0",
   "description": "A Node-based scaffolding tool for quickly creating front-end project templates",
