@@ -12,12 +12,14 @@
     "clean": "tsx scripts/clean.ts",
     "update:pkg": "tsx scripts/update.ts",
     "publish:ci": "tsx scripts/publish.ts",
+    "changelog": "conventional-changelog -p conventional-changelog-cli -i CHANGELOG.md -s -r 0",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
     "@types/node": "catalog:dev",
+    "conventional-changelog-cli": "^5.0.0",
     "eslint": "catalog:dev",
     "eslint-plugin-format": "catalog:dev",
     "tsx": "catalog:dev"
