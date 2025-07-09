@@ -12,3 +12,6 @@ publishProjects.forEach((project: string) => {
   }
   execSync(command, { stdio: 'inherit' })
 })
+
+// 发布完成后自动生成 changelog
+execSync('pnpm changelog', { stdio: 'inherit' })
